@@ -7,7 +7,7 @@ RUN apk add --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/
 
     # Remove cache and tmp files
     rm -rf /var/cache/apk/* && \
-    rm -rf /tmp/*
+    rm -rf /tmp/* && \
 
     # Create folder for xdebug
     mkdir /tmp/xdebug/
