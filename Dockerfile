@@ -5,6 +5,9 @@ MAINTAINER Onni Hakala - Geniem Oy. <onni.hakala@geniem.com>
 RUN apk add --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ \
     php7-xdebug && \
 
+    # Add inotify tools for quicker loading
+    apk add inotify-tools && \
+
     # Remove cache and tmp files
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/* && \
