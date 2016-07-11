@@ -1,0 +1,13 @@
+#!/bin/bash
+
+##
+# This is file watcher which restart php-fpm7 when files are changed
+# This is useful in development since php-fpm7 doesn't always reload correctly immediately
+##
+
+inotifywait -q -m -e close_write -r /var/www/project/ | grep ".php" |
+while read -r filename event; do
+  echo "Restarting php-fpm7..."
+  killall php-fpm7
+  sleep 1 # Don't overstress the system
+done
