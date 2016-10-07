@@ -3,7 +3,7 @@ MAINTAINER Onni Hakala - Geniem Oy. <onni.hakala@geniem.com>
 
 # Install xdebug
 RUN apk add --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ \
-    php7-xdebug && \
+    php7-xdebug php7-mongodb && \
 
     # Add inotify tools for quicker loading
     apk add inotify-tools && \
