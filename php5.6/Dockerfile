@@ -8,7 +8,7 @@ ENV \
     XDEBUG_REMOTE_HOST="127.0.0.1" \
     # Web user and group
     WEB_USER="wordpress" \
-    WEB_GROUP="web" \
+    WEB_GROUP="web"
 
 # Install xdebug
 RUN apk add --no-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ \
