@@ -4,4 +4,3 @@
 if [ -d $XDEBUG_PROFILER_DIR ] ; then
   chown $WEB_USER:$WEB_GROUP $XDEBUG_PROFILER_DIR
 fi
-
