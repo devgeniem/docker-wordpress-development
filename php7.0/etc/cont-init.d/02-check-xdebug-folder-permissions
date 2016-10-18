@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+# Give web user permissions to profile php-fpm into xdebug folder
+if [ -d $XDEBUG_PROFILER_DIR ] ; then
+  chown $WEB_USER:$WEB_GROUP $XDEBUG_PROFILER_DIR
+fi
+
