@@ -18,7 +18,7 @@ RUN \
 
 
     # Create folder for xdebug profiler
-    && mkdir -p $XDEBUG_PROFILER_DIR \
+    && mkdir -p $XDEBUG_DIR \
 
     # Cleanup
     && apt-get clean \
