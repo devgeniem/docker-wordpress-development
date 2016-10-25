@@ -13,7 +13,7 @@ ENV \
 RUN \
 
     # Install package from dotdeb
-    apt-get update && \
+    apt-get update \
     && apt-get install -y php7.0-xdebug \
 
 
