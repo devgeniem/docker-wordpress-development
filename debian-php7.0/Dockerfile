@@ -7,7 +7,11 @@ ENV \
     # Use OSX IP address loopback hack: https://gist.githubusercontent.com/ralphschindler/535dc5916ccbd06f53c1b0ee5a868c93/raw/com.ralphschindler.docker_10254_alias.plist
     # This can be overridden by you
     XDEBUG_REMOTE_HOST="10.254.254.254" \
-    XDEBUG_REMOTE_PORT="9000"
+    XDEBUG_REMOTE_PORT="9000" \
+    # You can enable this env to allow profiling your application with xdebug trigger
+    # This is disabled by default because it adds plenty of overhead when it's not needed
+    # Default: disabled
+    XDEBUG_ENABLE_PROFILE=0
 
 # Install xdebug
 RUN \
