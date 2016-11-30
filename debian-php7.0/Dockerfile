@@ -24,6 +24,9 @@ RUN \
     # Create folder for xdebug profiler
     && mkdir -p $XDEBUG_DIR \
 
+    # Remove custom error pages because they make debugging harder
+    && echo "# Disabled" > /etc/nginx/error_pages.conf \
+
     # Cleanup
     && apt-get clean \
     && apt-get autoremove \
