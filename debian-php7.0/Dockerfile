@@ -2,6 +2,8 @@ FROM devgeniem/wordpress-server:debian-php7.0
 MAINTAINER Onni Hakala - Geniem Oy. <onni.hakala@geniem.com>
 
 ENV \
+    # Display errors for easier debugging
+    PHP_DISPLAY_ERRORS="on" \
     # Directory to store xdebug profiling
     XDEBUG_DIR="/tmp/xdebug" \
     # Use OSX IP address loopback hack: https://gist.githubusercontent.com/ralphschindler/535dc5916ccbd06f53c1b0ee5a868c93/raw/com.ralphschindler.docker_10254_alias.plist
