@@ -20,8 +20,10 @@ RUN \
 
     # Install package from dotdeb
     apt-get update \
-    && apt-get install -y php7.0-xdebug \
+    && apt-get install -y php7.0-xdebug php7.0-mongodb php7.0-mcrypt \
 
+    # Install mcrypt
+    && apt-get install libmcrypt-dev \
 
     # Create folder for xdebug profiler
     && mkdir -p $XDEBUG_DIR \

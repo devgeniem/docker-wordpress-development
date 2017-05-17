@@ -13,11 +13,18 @@ ENV \
     WEB_GROUP="web"
 
 # Install xdebug
-RUN apk add --no-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ \
-    php7-xdebug && \
+RUN apk add --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ \
+    php7-xdebug php7-mongodb php7-mcrypt && \
 
-    # Add inotify tools
-    apk add --no-cache inotify-tools && \
+    # Add inotify tools for quicker loading
+    apk add inotify-tools && \
+
+    # Add mcrypt
+    apk add libmcrypt-dev && \
+
+    # Remove cache and tmp files
+    rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/* && \
 
     # Create folder for xdebug profiler
     mkdir -p $XDEBUG_PROFILER_DIR
